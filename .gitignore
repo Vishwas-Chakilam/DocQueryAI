@@ -1,0 +1,39 @@
+# Python Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Streamlit
+.streamlit/
+static/
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Databases
+chroma_db/
+
+# Vector Stores
+*.vdb
+*.db
+
+# Temporary Files
+tmp/
+temp/
+test_document.pdf
+generate_test_pdf.py
+
+# Screenshots (optional to push)
+# screenshot.png
+
+# Artifacts
+.gemini/
+.agents/
+.agent/
+_agents/
+_agent/
