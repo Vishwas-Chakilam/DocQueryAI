@@ -1,0 +1,19 @@
+Project Title:
+ DocQuery AISubtitle: A Retrieval-Augmented Generation (RAG) System for Intelligent Document Interaction1. 
+ Introduction:
+ DocQuery AI is an end-on-end RAG (Retrieval-Augmented Generation) application designed to bridge the gap between static PDF documents and interactive AI. Instead of manually searching through lengthy documents, users can upload a PDF and "chat" with it in natural language. The system extracts relevant context from the file and uses a Large Language Model (LLM) to provide precise, fact-based answers grounded in the document’s content.
+ 2. Project Goals:
+ Contextual Accuracy: Eliminate "hallucinations" by forcing the AI to answer only based on the provided PDF data.
+ Efficiency: Reduce the time spent scanning documents for specific information.
+ Scalability: Demonstrate a modular pipeline (Ingestion → Vectorization → Retrieval → Generation) that can be applied to any knowledge base.
+ 3. Tech Stack & Tools:
+ To build a professional-grade application, we will use the following:
+ Language: Python (The industry standard for AI).
+ Orchestration: LangChain or LlamaIndex (to connect the LLM with the data).
+ PDF Parsing: PyPDF2 or Unstructured.
+ Embeddings: HuggingFace (Sentence-Transformers) or Google Gemini Embeddings.
+ Vector Database: ChromaDB or FAISS (for fast similarity searches).
+ LLM: Gemini Pro (via Google AI Studio API).
+ UI/Frontend: Streamlit (to create a clean, web-based chat interface).
+ 4. Implementation Steps:
+ PhaseTaskDescription01Data IngestionExtract raw text from uploaded PDF files while maintaining structural integrity.02Text ChunkingBreak text into smaller "chunks" (e.g., 1000 characters) with an overlap to ensure context isn't lost at the edges.03VectorizationConvert text chunks into high-dimensional numerical vectors (Embeddings).04StorageStore these vectors in a local Vector Database for semantic retrieval.05RetrievalUse "Similarity Search" (Cosine Similarity) to find chunks most relevant to the user's query.06AugmentationCombine the user's question with the retrieved chunks into a "Prompt" for the LLM.07GenerationThe LLM generates a human-like response based only on the retrieved context.5. Key FeaturesSource Citation: The system can tell the user exactly which page or paragraph the answer came from.Persistent Memory: Remembers previous questions within the same session.Multi-Document Support: Ability to query across multiple PDFs simultaneously.
